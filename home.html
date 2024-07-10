@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>メルカリ風ホームページ</title>
+    <style>
+        /* スタイルの設定 */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            background-color: #f0f0f0;
+            padding: 10px 20px;
+            text-align: center;
+            position: fixed; /* 画面下に固定 */
+            bottom: 0; /* 画面下に配置 */
+            width: 100%; /* 幅を100%に設定 */
+            z-index: 999; /* 他の要素の上に表示 */
+        }
+        nav a {
+            text-decoration: none;
+            color: #333;
+            margin: 0 10px;
+        }
+        .container {
+            margin: 20px auto;
+            max-width: 800px;
+            padding: 0 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .product {
+            width: calc(33.33% - 10px); /* 幅を横幅の1/3に設定し、マージンを考慮 */
+            border: 1px solid #ddd;
+            padding: 20px;
+            box-sizing: border-box; /* paddingも含めた幅にする */
+        }
+        .product img {
+            width: 100%;
+            height: auto;
+            max-width: 100%; /* 画像が親要素に収まるように設定 */
+            max-height: 200px; /* 画像の最大高さを設定 */
+            object-fit: cover; /* 画像を親要素に収まるように長方形に切り取る */
+        }
+        .product h2 {
+            margin-top: 0;
+        }
+        .product p {
+            margin-bottom: 0;
+        }
+        .search {
+            margin-top: 30px;/* 検索バーの下に少し余白を追加 */
+            margin-bottom: 30px; /* 検索バーの下に少し余白を追加 */
+            text-align: center;
+        }
+        .search input[type="text"] {
+            width: 60%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+        .search input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 検索バー -->
+    <div class="search">
+        <form action="#" method="get">
+            <input type="text" name="search" placeholder="商品を検索">
+            <input type="submit" value="検索">
+        </form>
+    </div>
+    
+    <!-- 商品リスト -->
+    <div class="container">
+        <!-- 商品1 -->
+        <div class="product">
+            <img src="https://via.placeholder.com/150" alt="商品1">
+        </div>
+
+        <!-- 商品2 -->
+        <div class="product">
+            <img src="https://via.placeholder.com/150" alt="商品2">
+        </div>
+
+        <!-- 商品3 -->
+        <div class="product">
+            <img src="https://via.placeholder.com/150" alt="商品3">
+        </div>
+        
+    </div>
+
+    <!-- ナビゲーション -->
+    <nav>
+        <a href="profile.html">プロフィール</a>
+        <a href="sell.html">出品</a>
+    </nav>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>プロフィール</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            background-color: #f0f0f0;
+            padding: 10px 20px;
+            text-align: center;
+            position: fixed; /* 画面下に固定 */
+            bottom: 0; /* 画面下に配置 */
+            width: 100%; /* 幅を100%に設定 */
+            z-index: 999; /* 他の要素の上に表示 */
+        }
+        nav a {
+            text-decoration: none;
+            color: #333;
+            margin: 0 10px;
+        }
+
+        .profile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .profile-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .profile-header img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .profile-header h1 {
+            font-size: 24px;
+            margin: 5px 0;
+        }
+
+        .profile-header p {
+            font-size: 16px;
+            color: #666;
+            margin: 0;
+        }
+
+        .buttons-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #45a049;
+        }
+
+        .product-list {
+            text-align: center;
+        }
+
+        .product-list h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .product-list ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .product-list li {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="profile">
+        <div class="profile-header">
+            <img id="profile-icon" src="default-icon.png" alt="アイコン">
+            <h1 id="profile-name">ユーザー名</h1>
+            <p id="profile-bio">自己紹介文</p>
+            <div class="buttons-container">
+                <button id="edit-button" class="button">編集</button>
+                <a href="sell.html" class="button">出品する</a>
+            </div>
+        </div>
+        <div class="product-list">
+            <h2>出品した商品の一覧</h2>
+            <ul id="product-list">
+                <li>商品1</li>
+                <li>商品2</li>
+                <li>商品3</li>
+            </ul>
+        </div>
+    </div>
+     <!-- ナビゲーション -->
+     <nav>
+        <a href="home.html">ホーム</a>
+        <a href="sell.html">出品</a>
+        <a href="login.html">ログアウト</a>
+    </nav>
+</body>
+</html>
+
+

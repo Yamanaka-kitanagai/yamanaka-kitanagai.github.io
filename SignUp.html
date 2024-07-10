@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新規登録</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style> 
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url(12.gif);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        h1 {
+            text-align: center;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 90%; /* フォームの幅を調整 */
+            max-width: 400px; /* 最大幅を設定 */
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            margin: 10px 0;
+            padding: 10px;
+            font-size: 16px;
+            width: 100%;
+            max-width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            color: #080808;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            border: none;
+            padding: 10px 20px;
+            background-color: #a0a0a0;
+            width: 100%; /* ボタンの幅を100%に */
+            max-width: 300px; /* 最大幅を設定 */
+        }
+
+        nav {
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>新規登録</h1>
+        <form action="register.php" method="POST">
+            <input type="text" id="name" name="name" placeholder="名前" required>
+            <input type="text" id="StuNo" name="StuNo" placeholder="学籍番号" required>
+            <input type="password" id="password" name="password" placeholder="パスワード" required>
+            <nav>
+                <a href="login.html">既にアカウントをお持ちですか？ログインはこちら</a>
+            </nav>
+            <button type="submit">登録</button>
+        </form>
+    </div>
+</body>
+</html>

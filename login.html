@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ログイン</title>
+    <style>
+        /* ページ全体のスタイル */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* コンテナのスタイル */
+        .container {
+            text-align: center;
+        }
+
+        /* 見出しのスタイル */
+        h1 {
+            text-align: center;
+        }
+
+        /* フォームのスタイル */
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* 入力フィールドのスタイル */
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            margin: 10px 0;
+            padding: 10px;
+            font-size: 16px;
+            width: 100%;
+            max-width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        /* ボタンのスタイル */
+        button {
+            color: #080808;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            border: none;
+            padding: 10px 20px;
+            background-color: #a0a0a0;
+        }
+
+        /* ナビゲーションのスタイル */
+        nav {
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        /* ナビゲーション内リンクのスタイル */
+        nav a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        /* ナビゲーション内リンクのホバースタイル */
+        nav a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>ログイン</h1>
+        <form action="register.php" method="POST">
+            <!-- 学籍番号入力フィールド -->
+            <input type="text" id="StuNo" name="StuNo"placeholder="学籍番号" required>
+            <!-- パスワード入力フィールド -->
+            <input type="password" id="password" name="password" placeholder="パスワード" required>
+            <nav>
+                <!-- パスワード忘れリンク -->
+                <a href="login.html">パスワードをお忘れですか？</a><br>
+                <!-- 新規登録リンク -->
+                <a href="SignUp.html">新規登録はこちら</a>
+            </nav>
+            <!-- ログインボタン -->
+            <button type="submit">ログイン
+                <!-- ログイン後のページへのリンク -->
+                <a href="home.html"></a>
+            </button>
+        </form>
+    </div>
+</body>
+</html>
